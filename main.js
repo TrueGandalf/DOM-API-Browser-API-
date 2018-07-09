@@ -21,6 +21,16 @@ const div = document.getElementById('container');
 
 objectFromJson.data.sort( (a, b) => a.createdAt > b.createdAt ? -1: 1 );
 
+let serchQuery = "O".toLowerCase();
+
+objectFromJson.data.sort( (a, b) => 
+	a.tags.reduce( (s, it, n) => s+ ~it.toLowerCase().indexOf(serchQuery)/(-2), 0)
+	> 
+	b.tags.reduce( (s, it, n) => s+ ~it.toLowerCase().indexOf(serchQuery)/(-2), 0)
+	? -1: 1 
+);
+
+
 for (let i = 0; i < 10; i++) {
 
 	//console.log(objectFromJson);
