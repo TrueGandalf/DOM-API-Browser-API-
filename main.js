@@ -19,7 +19,7 @@ const div = document.getElementById('container');
 
 //alert(div.innerHTML);
 
-
+objectFromJson.data.sort( (a, b) => a.createdAt > b.createdAt ? -1: 1 );
 
 for (let i = 0; i < 10; i++) {
 
