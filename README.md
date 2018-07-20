@@ -1,2 +1,2 @@
 # DOM-API-Browser-API-
-third academy homework
+Let's lern API!
